@@ -33,5 +33,7 @@ integrations:
   hub:
     - integrationName: ship-ecr
       type: ecr
+      
+      
      
           
