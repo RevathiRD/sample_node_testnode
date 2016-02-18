@@ -26,8 +26,9 @@ build:
     - ps -eax
     - ls -al
 
- # post_ci:
-  #  - docker push shippabledocker/hitchcock3_sample_node
+  post_ci:
+    - docker build -t=quay.io/shippablequay/customnode .
+    - docker push quay.io/shippablequay/customnode
 
 integrations:
   hub:
