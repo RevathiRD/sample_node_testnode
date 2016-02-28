@@ -30,13 +30,20 @@ build:
   #  - docker push shippabledocker/hitchcock3_sample_node
 
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      branches:
-        only:
-          - master
-          
+ # hub:
+    #- integrationName: ship-docker
+      #type: docker
+      #branches:
+        #only:
+         # - master
+  notifications:
+        - integrationName: email
+          type: email
+          recipients: revathi@shippable.com
+          on_start: never
+          on_success: always
+          on_failure: change
+          on_pull_request: always     
           
           
           
