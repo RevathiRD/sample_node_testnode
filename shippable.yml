@@ -41,7 +41,7 @@ integrations:
         - integrationName: email
           type: email
           recipients: revathi@shippable.com
-          on_start: never
+          #on_start: never
           on_success: always
           on_failure: change
           on_pull_request: always     
